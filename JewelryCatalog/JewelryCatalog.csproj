@@ -10,9 +10,5 @@
 		<Folder Include="wwwroot\Images\" />
 	</ItemGroup>
 
-	<!-- ✅ This is the key part to add -->
-	<ItemGroup>
-		<Content Include="wwwroot\**\*.*" CopyToPublishDirectory="PreserveNewest" />
-	</ItemGroup>
-
+	
 </Project>
