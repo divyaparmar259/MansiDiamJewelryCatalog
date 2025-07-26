@@ -10,9 +10,6 @@
     <Folder Include="wwwroot/Images/" />
   </ItemGroup>
 
-  <!-- ✅ Fixed slashes here -->
-  <ItemGroup>
-    <Content Include="wwwroot/**/*.*" CopyToPublishDirectory="PreserveNewest" />
-  </ItemGroup>
+
 
 </Project>
