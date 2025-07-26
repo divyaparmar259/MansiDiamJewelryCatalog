@@ -8,12 +8,12 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copy only the project file first
-COPY QRScanner.csproj ./
-RUN dotnet restore QRScanner.csproj
+COPY JewelryCatalog.csproj ./
+RUN dotnet restore JewelryCatalog.csproj
 
 # Copy the rest of the code
 COPY . ./
-RUN dotnet publish QRScanner.csproj -c Release -o /app/publish
+RUN dotnet publish JewelryCatalog.csproj -c Release -o /app/publish
 
 # Final runtime image
 FROM base AS final
