@@ -18,12 +18,17 @@
     <link rel="stylesheet" href="~/JewelryCatalog.styles.css" asp-append-version="true" />
 </head>
 <body class="bg-light">
-    <header class="bg-warning text-dark py-3 mb-4 shadow">
+    <header class="py-3 mb-4 shadow">
         <div class="container d-flex align-items-center justify-content-between">
-            <h1 class="h4 mb-0"><i class="fas fa-gem me-2"></i>Jewelry Catalog</h1>
-            <img src="/Images/logo.jpg" alt="Logo" height="40" />
+     @*        <h1 class="h4 mb-0"><i class="fas fa-leaf me-2 text-white"></i><span class="text-white">Lab-Grown Diamond Catalog</span></h1>
+            <img src="~/images/logo.png" alt="Logo" height="40" /> *@
+
+            <h1 class="h4 mb-0 text-white"><i class="fas fa-leaf me-2"></i> Mansi Lab-Grown Diamond Jewelry</h1>
+            <img src="~/images/logo.png" alt="Logo" height="40" />
+
         </div>
     </header>
+
 
     <main role="main" class="container">
         @RenderBody()

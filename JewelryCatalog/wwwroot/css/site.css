@@ -1,37 +1,48 @@
-html {
-  font-size: 14px;
-}
 body {
     font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9f8;
+    color: #1a3c2c;
+    
 }
-h2, h3 {
-    color: #a88312;
+
+h2, h3, h4 {
+    color: #14532d;
 }
-.btn-warning {
-    background-color: #f7c842;
-    border-color: #d4a017;
+
+header {
+    background-color: #14532d !important;
+    color: white;
+}
+
+footer {
+    background-color: #1a3c2c;
+    color: #e6f2e9;
 }
 
 .card {
-    border: 1px solid #ffd700;
-    background: linear-gradient(to bottom right, #fffbe6, #fff3b0);
+    background: white;
+    border-left: 5px solid #1a3c2c;
+    border-radius: 10px;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.btn-green {
+    background-color: #198754; /* Bootstrap's green */
+    color: white;
+    border: none;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    .btn-green:hover {
+        background-color: #146c43;
+        color: white;
+    }
+
+.btn-outline-green {
+    border: 2px solid #198754;
+    color: #198754;
+    background: none;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
-}
+    .btn-outline-green:hover {
+        background-color: #198754;
+        color: white;
+    }
