@@ -1,13 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\Images\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="wwwroot\Images\" />
+	</ItemGroup>
+
+	<!-- ✅ This is the key part to add -->
+	<ItemGroup>
+		<Content Include="wwwroot\**\*.*" CopyToPublishDirectory="PreserveNewest" />
+	</ItemGroup>
 
 </Project>
