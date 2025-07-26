@@ -1,11 +1,39 @@
 ﻿@{
-    ViewData["Title"] = "Search Jewelry";
+    ViewData["Title"] = "Jewelry Search";
 }
+<div class="container mt-5">
+    <div id="searchArea">
+        <h2 class="text-center mb-4">Search Jewelry by Serial Number</h2>
+        <form id="searchForm" class="text-center">
+            <input type="text" id="serialNumber" name="serialNumber" class="form-control w-50 mx-auto mb-3" placeholder="Enter Serial Number" required />
+            <button type="submit" class="btn btn-warning text-dark"><i class="fas fa-search"></i> Search</button>
+        </form>
+    </div>
 
-<div class="text-center my-5">
-    <h2 class="mb-4">🔍 Search Jewelry by Serial Number</h2>
-    <form asp-action="Search" method="post" class="d-flex justify-content-center">
-        <input type="text" name="serialNumber" class="form-control w-50 me-2" placeholder="Enter Serial Number" required />
-        <button type="submit" class="btn btn-warning text-dark"><i class="fas fa-search"></i> Search</button>
-    </form>
+    <div id="resultArea" class="mt-4"></div>
 </div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $("#searchForm").submit(function (e) {
+            e.preventDefault();
+            var serial = $("#serialNumber").val();
+            $.ajax({
+                type: "POST",
+                url: "/Home/Search",
+                data: { serialNumber: serial },
+                success: function (result) {
+                    $("#searchArea").hide();
+                    $("#resultArea").html(result);
+                }
+            });
+        });
+
+        function resetSearch() {
+            $("#serialNumber").val('');
+            $("#resultArea").html('');
+            $("#searchArea").show();
+        }
+    </script>
+}

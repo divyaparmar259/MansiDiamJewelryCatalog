@@ -27,11 +27,14 @@
 
     <main role="main" class="container">
         @RenderBody()
+        @RenderSection("Scripts", required: false)
     </main>
 
     <footer class="bg-dark text-white text-center p-3 mt-5">
         &copy; 2025 Jewelry Catalog. All rights reserved.
     </footer>
+   
+
 </body>
 
 </html>

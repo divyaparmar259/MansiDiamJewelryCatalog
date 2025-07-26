@@ -14,21 +14,37 @@ namespace JewelryCatalog.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index() => View();
+        //public IActionResult Index() => View();
+
+        //[HttpPost]
+        //public IActionResult Search(string serialNumber)
+        //{
+        //    var product = JewelryService.GetBySerial(serialNumber);
+        //    if (product == null)
+        //        return View("NotFound"); // optional page
+        //    return View("Details", product);
+        //}
+
+        //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        //public IActionResult Error()
+        //{
+        //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        //}
+        public IActionResult Index()
+        {
+            return View();
+        }
 
         [HttpPost]
         public IActionResult Search(string serialNumber)
         {
             var product = JewelryService.GetBySerial(serialNumber);
             if (product == null)
-                return View("NotFound"); // optional page
-            return View("Details", product);
-        }
+            {
+                return PartialView("_NotFoundPartial");
+            }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return PartialView("_DetailsPartial", product);
         }
     }
 }
