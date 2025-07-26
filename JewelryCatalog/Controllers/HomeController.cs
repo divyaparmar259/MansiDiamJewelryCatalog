@@ -1,6 +1,7 @@
-using System.Diagnostics;
 using JewelryCatalog.Models;
+using JewelryCatalog.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace JewelryCatalog.Controllers
 {
@@ -13,14 +14,15 @@ namespace JewelryCatalog.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public IActionResult Index() => View();
 
-        public IActionResult Privacy()
+        [HttpPost]
+        public IActionResult Search(string serialNumber)
         {
-            return View();
+            var product = JewelryService.GetBySerial(serialNumber);
+            if (product == null)
+                return View("NotFound"); // optional page
+            return View("Details", product);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

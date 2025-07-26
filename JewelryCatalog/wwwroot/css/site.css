@@ -1,6 +1,21 @@
 html {
   font-size: 14px;
 }
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+h2, h3 {
+    color: #a88312;
+}
+.btn-warning {
+    background-color: #f7c842;
+    border-color: #d4a017;
+}
+
+.card {
+    border: 1px solid #ffd700;
+    background: linear-gradient(to bottom right, #fffbe6, #fff3b0);
+}
 
 @media (min-width: 768px) {
   html {

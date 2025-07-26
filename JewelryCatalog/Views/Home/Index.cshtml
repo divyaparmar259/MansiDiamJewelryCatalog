@@ -1,8 +1,11 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Search Jewelry";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="text-center my-5">
+    <h2 class="mb-4">🔍 Search Jewelry by Serial Number</h2>
+    <form asp-action="Search" method="post" class="d-flex justify-content-center">
+        <input type="text" name="serialNumber" class="form-control w-50 me-2" placeholder="Enter Serial Number" required />
+        <button type="submit" class="btn btn-warning text-dark"><i class="fas fa-search"></i> Search</button>
+    </form>
 </div>
