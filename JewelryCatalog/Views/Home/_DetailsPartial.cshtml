@@ -4,19 +4,48 @@
     <h4 class="mb-3 text-center"><i class="fas fa-diamond"></i> Jewelry Details</h4>
     <div class="row">
         <div class="col-md-6">
-            <p><strong>Serial Number:</strong> @Model.SerialNumber</p>
-            <p><strong>Product Title:</strong> @Model.ProductTitle</p>
+            <p><strong>Serial Number:</strong> @Model.ProductCode</p>
+            <p><strong>Category:</strong> @Model.Category</p>
             <p><strong>Gold Type:</strong> @Model.GoldType</p>
-            <p><strong>Gross Weight:</strong> @Model.GWT g</p>
-            <p><strong>Net Weight:</strong> @Model.NWT g</p>
+            <p><strong>Gross Weight:</strong> @Model.GWT</p>
+            <p><strong>Net Weight:</strong> @Model.NWT</p>
         </div>
-        <div class="col-md-6">
-            <p><strong>Soliter Diamond:</strong> @Model.SoliterDiamond</p>
-            <p><strong>Small Diamond:</strong> @Model.SmallDiamond</p>
+         <div class="col-md-6">
+            <div class="row mb-2">
+        <div class="col-4">
+            <strong>SmallDiamondPCS:</strong> @Model.SmallDiamondPCS
+        </div>
+        <div class="col-4">
+            <strong>Used:</strong> @Model.SmallDiamondUsed
+        </div>
+        <div class="col-4">
+            <strong>Price:</strong> ₹@Model.SmallDiamondPrice
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-4">
+            <strong>SolitairePCS:</strong> @Model.SoliterDiamondPCS
+        </div>
+        <div class="col-4">
+            <strong>Used:</strong> @Model.SoliterDiamondUsed
+        </div>
+        <div class="col-4">
+            <strong>Price:</strong> ₹@Model.SoliterDiamondPrice
+        </div>
+    </div>
+            <div class="row mb-2">
+                <div class="col-6">
+                    <strong>Total Diamond (CTS):</strong> @Model.TotalDiamondInCTS
+                </div>
+                <div class="col-6">
+                    <strong>Total Diamond Price:</strong> ₹@Model.TotalDiamondPrice
+                </div>
+            </div>
+
             <p><strong>Labour:</strong> ₹@Model.Labour</p>
-            <p><strong>Require:</strong> @Model.RequireData</p>
             <p><strong>Total Amount:</strong> ₹@Model.TotalAmount</p>
-        </div>
+        </div> 
     </div>
 
     <div class="text-start mt-4">
