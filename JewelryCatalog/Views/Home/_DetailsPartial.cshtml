@@ -1,7 +1,8 @@
 ﻿@model JewelryProduct
 
 <div class="card shadow-lg border-0 mb-5 p-4">
-    <h4 class="mb-3 text-center"><i class="fas fa-diamond"></i> Jewelry Details</h4>
+    <h4 class="mb-3 text-center"><i class="fas fa-gem"></i> Jewelry Details</h4>
+
     <div class="row">
         <div class="col-md-6">
             <p><strong>Serial Number:</strong> @Model.ProductCode</p>
@@ -10,44 +11,24 @@
             <p><strong>Gross Weight:</strong> @Model.GWT</p>
             <p><strong>Net Weight:</strong> @Model.NWT</p>
         </div>
-         <div class="col-md-6">
-            <div class="row mb-2">
-        <div class="col-4">
-            <strong>SmallDiamondPCS:</strong> @Model.SmallDiamondPCS
-        </div>
-        <div class="col-4">
-            <strong>Used:</strong> @Model.SmallDiamondUsed
-        </div>
-        <div class="col-4">
-            <strong>Price:</strong> ₹@Model.SmallDiamondPrice
-        </div>
-    </div>
+         <div class="col-md-6">     
 
-    <div class="row mb-2">
-        <div class="col-4">
-            <strong>SolitairePCS:</strong> @Model.SoliterDiamondPCS
-        </div>
-        <div class="col-4">
-            <strong>Used:</strong> @Model.SoliterDiamondUsed
-        </div>
-        <div class="col-4">
-            <strong>Price:</strong> ₹@Model.SoliterDiamondPrice
-        </div>
-    </div>
-            <div class="row mb-2">
-                <div class="col-6">
-                    <strong>Total Diamond (CTS):</strong> @Model.TotalDiamondInCTS
-                </div>
-                <div class="col-6">
-                    <strong>Total Diamond Price:</strong> ₹@Model.TotalDiamondPrice
-                </div>
-            </div>
-
+             <p><strong>Small Diamond Pieces:</strong> @Model.SmallDiamondPCS </p>
+             <p><strong>Used:</strong> @Model.SmallDiamondUsed</p>
+             <p><strong>Price:</strong> ₹@Model.SmallDiamondPrice</p>
+            <p><strong>Solitaire Diamond Pieces:</strong> @Model.SoliterDiamondPCS</p>
+            <p><strong>Used:</strong> @Model.SoliterDiamondUsed</p>
+     </div>
+     <div class="col-md-6">     
+            <p><strong>Price:</strong> ₹@Model.SoliterDiamondPrice</p>
+             <p><strong>Total Diamond (CTS):</strong> @Model.TotalDiamondInCTS</p>
+            <p><strong>Total Diamond Price:</strong> ₹@Model.TotalDiamondPrice</p>
             <p><strong>Labour:</strong> ₹@Model.Labour</p>
-            <p><strong>Total Amount:</strong> ₹@Model.TotalAmount</p>
-        </div> 
-    </div>
+            <p><strong style="font-size: 1.2rem; color: #14532d;">Total Amount:</strong> <span class="fw-bold text-success">₹@Model.TotalAmount</span></p>
 
+    </div> 
+   
+    </div> 
     <div class="text-start mt-4">
         <button class="btn btn-outline-green btn-sm px-3" onclick="resetSearch()">
             <i class="fas fa-arrow-left"></i> Back

@@ -25,6 +25,44 @@ namespace JewelryCatalog.Services
             Labour = "600",
             TotalAmount = "52000"
         },
+         new JewelryProduct
+        {
+            SerialNumber = 2,
+            ProductCode="J002",
+            Category = "Rose Gold Necklace",
+            GoldType = "14 KT ROSE GOLD",
+            GWT = "3.167",
+            NWT = "3.167",
+            SmallDiamondPCS=16,
+            SmallDiamondUsed="0.42",
+            SmallDiamondPrice="9000",
+            SoliterDiamondPCS = 2,
+            SoliterDiamondUsed="0.14",
+            SoliterDiamondPrice="10500",
+            TotalDiamondInCTS ="0.62",
+            TotalDiamondPrice = "3780",
+            Labour = "600",
+            TotalAmount = "52000"
+        },
+           new JewelryProduct
+        {
+            SerialNumber = 3,
+            ProductCode="J003",
+            Category = "Rose Gold Necklace",
+            GoldType = "14 KT ROSE GOLD",
+            GWT = "3.167",
+            NWT = "3.167",
+            SmallDiamondPCS=16,
+            SmallDiamondUsed="0.42",
+            SmallDiamondPrice="9000",
+            SoliterDiamondPCS = 2,
+            SoliterDiamondUsed="0.14",
+            SoliterDiamondPrice="10500",
+            TotalDiamondInCTS ="0.62",
+            TotalDiamondPrice = "3780",
+            Labour = "600",
+            TotalAmount = "52000"
+        },
        
         // Add more items as needed
     };
