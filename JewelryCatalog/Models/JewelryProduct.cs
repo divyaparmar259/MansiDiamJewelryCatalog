@@ -9,10 +9,10 @@
         public string? GWT { get; set; }
         public string? NWT { get; set; }
 
-        public int? SmallDiamondPCS { get; set; }
+        public string? SmallDiamondPCS { get; set; }
         public string? SmallDiamondUsed { get; set; }
         public string? SmallDiamondPrice { get; set; }
-        public int? SoliterDiamondPCS { get; set; }
+        public string? SoliterDiamondPCS { get; set; }
 
         public string? SoliterDiamondUsed { get; set; }
         public string? SoliterDiamondPrice { get; set; }
